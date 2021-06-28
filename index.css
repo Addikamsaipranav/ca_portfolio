@@ -1,0 +1,548 @@
+html
+{
+  overflow-x: hidden;
+}
+body{
+  overflow-x: hidden;
+}
+#demo{
+  z-index: 1;
+}
+.navigation{
+  position: fixed;
+  z-index:2;
+  width:100%;
+}
+.topheader{
+    background-color:ghostwhite;
+    border-bottom: 1px solid silver;
+}
+.mycols a{
+    color: #181b1f;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.89rem;
+    padding-left: 4rem;
+}
+.contact{
+  display: inline;
+}
+.mail{
+  display: inline;
+}
+.icon-list a{
+  text-decoration: none;
+  color:white;
+}
+.imgnav{
+    width: 50px;
+    height: 40px;
+    margin-left:4rem;
+}
+.navbar-brand{
+    padding-left: 4rem;
+  }
+#navbarNav a{
+      font-weight: 400;
+      font-size: 0.89rem;
+      color: #181b1f;
+  }
+#navbarNav a:hover{
+    text-decoration: none;
+    font-size: 0.89rem;
+    font-weight: 600;
+}
+
+.about{
+  height:850px;
+  width:100%;
+  background-color: black;
+  height:auto;
+}
+.about h1{
+  margin-left:0px;
+  padding-top:0px;
+  color:white;
+}
+.about p{
+padding-top:0px;
+color:white;
+max-width:65%;
+line-height: 2;
+text-align:justify;
+text-justify:inter-word;
+}
+.icon{
+  color:white;
+}
+.icon:hover{
+  color:crimson;
+}
+.btn-1{
+  color: white;
+  text-decoration: none;
+  z-index:-1;
+}
+.btn a{
+  text-decoration: none;
+  color: white;
+}
+.btn a:hover{
+  text-decoration: none;
+  color: black;
+}
+.cards{
+  width: 100%;
+  height: auto;
+  padding-left: 10%;
+  padding-top: 9%;
+}
+
+.card{
+  margin-top: 6%;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --top:93%;
+  --left:10%;
+}
+
+.card{
+  width: 300px;
+  height: 250px;
+  position: relative;
+  background-size: cover;
+  border-radius: 20px;
+
+}
+.card:nth-child(2){
+
+  background-size: cover;
+}
+.card:nth-child(3){
+
+  background-size: cover;
+}
+.card .box{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background : #1b1b1b;
+  transition: 1s transform;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  opacity: 0;
+
+}
+.card .box:nth-child(1){
+  clip-path: polygon(0 0,0% 100%,100% 100%);
+}
+.card .box:nth-child(2){
+  clip-path: polygon(0 0,100% 0,100% 100%);
+}
+.card:hover .box{
+  animation: boxhover 1s forwards 1;
+}
+.btn{
+  margin-bottom: 4rem;
+}
+@keyframes boxhover
+{
+  0%{
+      opacity: 1;
+      transform: translate(-50%,-50%) rotate(0);
+  }
+
+  50%,70%{
+      opacity: 1;
+      transform: translate(-50%,-50%) rotate(360deg);
+      top: 50%;
+      left: 50%;
+  }
+  100%{
+      opacity: 1;
+      transform: translate(-50%,-50%) rotate(360deg);
+      top: var(--top);
+      left: var(--left);
+  }
+}
+.content{
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: 1s;
+  background :#fff;
+  border-radius: 10px;
+  z-index: 1;
+  border: 8px solid #1b1b1b;
+  padding: 10px;
+  opacity: 0;
+}
+.card:hover .content{
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+.heading{
+  text-transform: capitalize;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+.para{
+  margin-top: 0px;
+  text-align: justify;
+}
+@media screen and (max-width: 480px){
+  .erp h1{
+    font-size: medium;
+    font-weight: bold;
+    padding-top: 2rem;
+    margin-left: 2rem;
+    margin-top: auto;
+  }
+  .mycols a{
+    font-size: 0.6rem;
+    display: inline;
+   }
+  .navbar-brand{
+      padding-left: 0rem;
+    }
+    .imgnav{
+      margin-left:0;
+    }
+    .carousel-caption h1{
+      font-size: 20px;
+    }
+    .carousel-caption p{
+      font-size: 10px;
+    }
+    .cimg{
+      width:100%;
+      height: 60vh;
+    }
+    .about{
+      width:100%;
+      background-color: black;
+    }
+    .about h1{
+      margin-left:27%;
+      padding:1rem;
+      color:white;
+    }
+    .about p{
+      margin-left:10%;
+      padding-right:2px;
+      padding-top:0px;
+      color:white;
+      max-width:80%;
+      line-height: 2;
+      font-size: 13px;
+      padding-bottom: 1rem;
+    }
+    .work{
+      margin-left:27%;
+    }
+    .line{
+      color:white;
+      height:0.5%;
+      width:79%;
+      margin-left: 10%;
+      position: absolute;
+    }
+    .btn{
+      margin-left:30%;
+      position: relative;
+      bottom:0.4rem;
+      z-index: 1;
+      background-color: black;
+    }
+    .cards{
+      width: 100%;
+      padding-left: 10%;
+      padding-top: 9%;
+      height:auto;
+    }
+    .icon{
+      font-size:2rem;
+       color:white;
+    }
+    .icon-list{
+      margin-bottom: 20px;
+      margin-top:2%;
+    }
+    .icon-list .icon{
+      margin-left: 45%;
+      text-align: center;
+    }
+    .icon-list p{
+      margin-left: 33%;
+    }
+    .services h1{
+      margin-left: 30%;
+      padding: 1rem;
+      padding-top: 1.5rem;
+    }
+    .news{
+      width:100%;
+      height:auto;
+      color: black;
+      background-color: white;
+
+    }
+    .news h3{
+      padding: 1rem;
+      padding-top: 3rem;
+    }
+    .news p{
+      margin-left: 4%;
+    }
+    .inp{
+    width:70%;
+    padding: 1rem;
+    margin-left: 10%;
+    }
+    .inp1{
+      width:70%;
+      margin-left: 10%;
+      padding: 1rem;
+    }
+    .inp2{
+      margin-top: 1rem;
+      margin-left:31%;
+    }
+    .images{
+      margin-left:2%;
+    }
+}
+@media screen and (min-width: 768px){
+  .erp h1{
+    margin-top: auto;
+  }
+  .mycols a{
+    font-size: 1rem;
+    display: inline;
+  }
+  .navbar-brand{
+      padding-left: 0rem;
+    }
+    .imgnav{
+      margin-left:0;
+    }
+    .cimg{
+      width: 100%;
+      height: 100vh;
+    }
+    .about{
+      width:100%;
+      background-color: black;
+    }
+    .about h1{
+      margin-left:34%;
+      padding:4rem;
+      color:white;
+    }
+    .about p{
+      margin-left:10%;
+      padding-right:2px;
+      padding-top:0px;
+      color:white;
+      max-width:83%;
+      line-height: 2;
+      font-size: 15px;
+      padding-bottom: 1rem;
+    }
+    .work{
+      margin-left:34%;
+    }
+    .line{
+      color:white;
+      height:0.5%;
+      width:79%;
+      margin-left: 10%;
+      position: absolute;
+    }
+    .btn{
+      margin-left:40%;
+      position: relative;
+      bottom:0.4rem;
+      z-index: 1;
+      background-color: black;
+    }
+    .card{
+          margin-left: 25%;
+          padding-top: 9%;
+        }
+    .icon{
+      font-size:2rem;
+       color:white;
+       margin: 2rem;
+       margin-right: 3rem;
+    }
+    .icon:hover{
+      color: crimson;
+    }
+    .icon-list{
+      margin-bottom: 20px;
+    }
+    .icon-list .icon{
+      margin-left: 40%;
+      text-align: center;
+      font-size: 3rem;
+    }
+    .icon-list p{
+      margin-left: 25%;
+    }
+    .services h1{
+      margin-left: 34%;
+      padding: 1rem;
+      padding-top: 3rem;
+      font-size: 4rem;
+    }
+    .news{
+      width:100%;
+      height:auto;
+      background-color: white;
+    }
+    .news h3{
+      padding: 1rem;
+      padding-top: 3rem;
+      margin-left: 21%;
+      font-size: 1.5rem;
+    }
+    .news p{
+      margin-left: 0%;
+      font-size: 25px;
+    }
+    .inp{
+    width:70%;
+    padding: 1rem;
+    margin-left: 10%;
+    }
+    .inp1{
+      width:70%;
+      margin-left: 10%;
+      padding: 1rem;
+    }
+    .inp2{
+      margin-top: 1rem;
+      margin-left:40%;
+      font-size: 2rem;
+    }
+}
+@media screen and (min-width: 1025px){
+  .erp h1{
+    padding-top: 2rem;
+    padding-left: 10rem;
+    margin-top: auto;
+  }
+
+  .about h1{
+    margin-left:40%;
+    padding:1.5rem;
+    color:white;
+  }
+  .cimg{
+    width:100%;
+    height: 100vh;
+  }
+  .about h1{
+    padding-top: 7.5rem;
+  }
+  .about p{
+    max-width:79%;
+  }
+  .imgnav{
+    margin-left:4rem;
+  }
+  .line{
+    color:white;
+    height:0.5%;
+    width:79%;
+    margin-left: 10%;
+    position: absolute;
+  }
+  .btn{
+    margin-left: 43.5%;
+    position: relative;
+    bottom:0.4rem;
+    z-index: 1;
+    background-color: black;
+  }
+  .card{
+
+    margin-left: 0%;
+    padding-top: 9%;
+  }
+  .services1{
+    margin-left: 20%;
+    padding-bottom: 2rem;
+    height:70vh;
+  }
+  .services h1{
+    padding-top:10%;
+    padding-left: 8%;
+  }
+  .work{
+    margin-left:37%;
+    padding-top:0;
+    margin-top:0;
+    top:0;
+  }
+  .icon{
+    color:white;
+  }
+  .icon:hover{
+    color: crimson;
+  }
+  .news{
+    margin-top:6%;
+  }
+  .news h3{
+    padding-top:1%;
+    margin-left: 33%;
+  }
+  .news p{
+    margin-left: 20%;
+    font-size: 25px;
+  }
+  .inp{
+  margin-left: 20%;
+  position: absolute;
+  width: 40%;
+  left: 13%;
+  }
+  .inp1{
+   position: relative;
+   left:39%;
+   width: 40%;
+  }
+  .input{
+    width: 50%;
+  }
+  .inp2{
+    margin-top: 2%;
+    margin-left:41%;
+    font-size: 1.5rem;
+  }
+}
+.erp{
+  width: 100%;
+  height: auto;
+}
+.erp h1{
+  margin-top: 20px;
+}
+.erp img{
+  width: 300px;
+  height: 200px;
+  padding: 30px 30px 30px 30px;
+}

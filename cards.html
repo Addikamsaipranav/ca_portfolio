@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <title>Hello, world!</title>
+    <style>
+         .cards{
+            width: 100%;
+            height: 90%;
+            padding-left: 10%;
+            padding-top: 4%;
+        }
+       
+        .card{
+            margin-top: 5%;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --top:93%;
+            --left:10%;
+        }
+       
+        .card{
+            width: 300px;
+            height: 350px;
+            position: relative;
+            background-size: cover;
+            border-radius: 20px;
+            background-image: url(images/vision.jpg);
+        }
+        .card:nth-child(2){
+            background-image: url(images/objective.jpg);
+            background-size: cover;
+        }
+        .card:nth-child(3){
+            background-image: url(images/objective.jpg);
+            background-size: cover;
+        }
+        .card .box{
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background : #1b1b1b;
+            transition: 1s transform;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 2;
+            opacity: 0;
+            
+        }
+        .card .box:nth-child(1){
+            clip-path: polygon(0 0,0% 100%,100% 100%);
+        }
+        .card .box:nth-child(2){
+            clip-path: polygon(0 0,100% 0,100% 100%);
+        }
+        .card:hover .box{
+            animation: boxhover 1s forwards 1;
+        }
+        @keyframes boxhover 
+        {
+            0%{
+                opacity: 1;
+                transform: translate(-50%,-50%) rotate(0);
+            }
+            
+            50%,70%{
+                opacity: 1;
+                transform: translate(-50%,-50%) rotate(360deg);
+                top: 50%;
+                left: 50%;
+            }
+            100%{
+                opacity: 1;
+                transform: translate(-50%,-50%) rotate(360deg);
+                top: var(--top);
+                left: var(--left);
+            }
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            transition: 1s;
+            background :#fff;
+            border-radius: 10px;
+            z-index: 1;
+            border: 8px solid #1b1b1b;
+            padding: 40px;  
+            opacity: 0;              
+        }
+        .card:hover .content{
+            opacity: 1;
+            transition-delay: 0.5s;
+        }
+        .heading{
+            text-transform: capitalize;
+            font-size: 40px;
+            font-weight: 400;
+            text-align: center;
+        }
+        .para{
+            margin-top: 0px;
+            text-align: justify;
+        }
+        @media screen and (min-width: 1025px){
+            .news h3{
+    padding-top:2%;
+    margin-left: 32%;
+  }
+  .news p{
+    margin-left: 21%;
+    font-size: 25px;
+  }
+  .inp{
+  margin-left: 20%;
+  position: absolute;
+  width: 40%;
+  left: 13%;
+  }
+  .inp1{
+   position: relative;
+   left:50%;
+   width: 40%;
+  }
+  .input{
+    width: 50%;
+  }
+  .inp2{
+    margin-top: 2%;
+    margin-left:45%;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 480px){
+ 
+    .news{
+      width:100%;
+      height:300px;
+      color: black;
+    
+    }
+    .news h3{
+      padding: 1rem;
+      padding-top: 3rem;
+    }
+    .news p{
+      margin-left: 4%;
+    }
+    .inp{
+    width:70%;
+    padding: 1rem;
+    margin-left: 10%;
+    }
+    .inp1{
+      width:70%;
+      margin-left: 10%;
+      padding: 1rem;
+    }
+    .inp2{
+      margin-top: 1rem;
+      margin-left:35%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .news{
+      width:100%;
+      height:600px;
+    }
+    .news h3{
+      padding: 1rem;
+      padding-top: 3rem;
+      margin-left: 5%;
+      font-size: 1.5rem;
+    }
+    .news p{
+      margin-left: 0%;
+      font-size: 25px;
+    }
+    .inp{
+    width:70%;
+    padding: 1rem;
+    margin-left: 10%;
+    }
+    .inp1{
+      width:70%;
+      margin-left: 10%;
+      padding: 1rem;
+    }
+    .inp2{
+      margin-top: 1rem;
+      margin-left:40%;
+      font-size: 2rem;
+    }
+  }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid cards">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12">
+            <div class="card">
+                <span class="box" style="--top:93%; --left:10%"></span>
+                <span class="box" style="--top:7%; --left:90%"></span>
+          
+                <div class="content">
+                    <h1 class="heading">Our vision</h1>
+                    <p class="para">Our firm continuously strives to be the Premier 
+                        Accounting 
+                        and Consultancy firm that provides excellent service to our clients and 
+                        an excellent quality of life for our associates.</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12">
+            <div class="card">
+                <span class="box" style="--top:93%; --left:10%"></span>
+                  <span class="box" style="--top:7%; --left:90%"></span>
+                <div class="content">
+                    <h1 class="heading">Our Mission</h1>
+                    <p class="para">We will predominantly work with organisations in the charitable
+                         and voluntary sectors as partners to help them achieve their desired outcomes.</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12">
+            <div class="card">
+                <span class="box" style="--top:93%; --left:10%"></span>
+                  <span class="box" style="--top:7%; --left:90%"></span>
+                <div class="content">
+                    <h1 class="heading">Our objective</h1>
+                    <p class="para">We are committed to creating and sustaining long-term relationships which 
+                        drawn on our experience and expertise to help our clients achieve real success</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="news">
+            <h3 data-aos="fade-up">Subscribe Our Newsletter</h3>
+            <p data-aos="fade-up">Get useful latest news and other important updates to your mail</p>
+            <form class="" action="index.html" method="post">
+              <div class="inputs">
+                <div class="inp" data-aos="fade-up">
+                  <input class="form-control input" type="name" name="" value="" placeholder="Name">
+                </div>
+                <div class="inp1" data-aos="fade-up">
+                  <input class="form-control input " type="email" name="" value="" placeholder="Email">
+                </div>
+                <div class="">
+                  <button data-aos="fade-up" class=" inp2 btn btn-lg btn-outline-light" type="button" name="button">Submit</button>
+                </div>
+              </div>
+          </div>
+
+
+
+      </div>
+   
+  </body>
+</html>
