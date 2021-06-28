@@ -329,22 +329,15 @@
   <div class="career-form">
     <form class="form" action="index.html" method="post">
       <label for="">NAME</label>
-      <input class='text' type="text" name="" value="" placeholder="Name"><br>
+      <input class='text' type="text" name="" id="name" value="" placeholder="Name"><br>
       <label for="">EMAIL</label>
-      <input class='text' type="email" name="" value="" placeholder="Email"><br>
+      <input class='text' type="email" name="" value="" id="email" placeholder="Email"><br>
       <label for="">MOBILE</label>
-      <input class='text' type="text" name="" value="" placeholder="Contact Number"><br>
-      <label class='form-element' for="Categories">CATEGORIES</label>
-      <select id="categories">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      </select><br>
+      <input class='text' type="text" name="" value="" id="mobile" placeholder="Contact Number"><br>
       <label for="">UPLOAD YOUR RESUME</label><br>
-      <input class='file form-element' type="file" id="myFile" name="filename"> <br>
-      <button class='btn1 btn-outline-primary btn-lg' type="button" name="button">Submit</button>
+      <input class='file form-element' type="file" id="myFile" name="filename" accept="application/pdf,application/vnd.ms-excel" required> <br>
+      <div id="messages"></div>
+      <button id="submit" class='btn1 btn-outline-primary btn-lg' type="button" name="button">Submit</button>
     </form>
       </div>
       <div class="career-img">
@@ -407,4 +400,9 @@
       </div>
     </footer>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+      <script src="./js/career.js"></script>
 </body>
