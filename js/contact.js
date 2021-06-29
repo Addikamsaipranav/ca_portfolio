@@ -76,9 +76,10 @@ const contactUsFormUpload = () => {
             All Fields are required!!
         </div>
       `;
+      setTimeout(() => {
+        window.location.reload();
+      }, 100);
     }
-
-    
   })
 
 };
