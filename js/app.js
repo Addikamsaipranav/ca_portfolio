@@ -21,7 +21,6 @@ const contactUsFormUpload = () => {
   const firestoreRef = firebase.firestore();
 
   saveButton.addEventListener("click", function (event) {
-    event.preventDefault();
     const name = document.getElementById("user_name").value;
     const email = document.getElementById("user_email").value;
     const phoneNumber = document.getElementById("user_phone").value;
@@ -47,7 +46,7 @@ const contactUsFormUpload = () => {
                         Successfully submitted!!
                     </div>
                     `;
-        window.location.reload();
+        
       })
       .catch(function (error) {
         console.log(`Got an error : ${error}`);

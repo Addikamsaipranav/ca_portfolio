@@ -40,7 +40,7 @@ fileUploadRef.addEventListener("change", function (e) {
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
   
           messageLog.innerHTML = `
-            <div class="progress">
+            <div class="progress my-2">
             <div class="progress-bar bg-success" role="progressbar" style="width: ${percentage}%;" aria-valuenow="${percentage}" aria-valuemin="0" aria-valuemax="100">${percentage}%</div>
           </div>
             `;
